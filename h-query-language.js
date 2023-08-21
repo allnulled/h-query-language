@@ -152,7 +152,7 @@ function peg$parse(input, options) {
       peg$c8 = peg$literalExpectation(");", false),
       peg$c9 = function(token1, tabla, token2, atributos, token3, composicion, token4) { return { tabla, atributos, composicion } },
       peg$c10 = function(sentencia1, sentenciaN) { return [].concat([sentencia1]).concat(sentenciaN); },
-      peg$c11 = function(token1, columna, token2, tipo, detalles, hiperdetalles) { return { sentencia: "columna", columna, tipo, detalles, hiperdetalles } },
+      peg$c11 = function(token1, columna, token2, tipo, detalles, atributos) { return { sentencia: "columna", columna, tipo, detalles, atributos } },
       peg$c12 = ",",
       peg$c13 = peg$literalExpectation(",", false),
       peg$c14 = "\n",

@@ -23,8 +23,8 @@ HQL_Sentencia_CREATE_COLUMN =
   token2:(_+)
   tipo:HQL_Tipos
   detalles:HQL_Detalles_de_columna
-  hiperdetalles:HQL_Hiperdetalles_de_columna?
-    { return { sentencia: "columna", columna, tipo, detalles, hiperdetalles } }
+  atributos:HQL_Hiperdetalles_de_columna?
+    { return { sentencia: "columna", columna, tipo, detalles, atributos } }
 HQL_Detalles_de_columna = (!(","/"\n"/"/*").)* { return text().trim() }
 HQL_Hiperdetalles_de_columna =
   token1:"/*"
