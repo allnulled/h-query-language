@@ -5,11 +5,11 @@ HQL_Sentencia_CREATE_TABLE =
   token1:(_* ("CREATE TABLE"/"create table") _+)
   tabla:HQL_Id
   token2:( _* )
-  hiperatributos:HQL_Hiperdetalles_de_columna?
+  atributos:HQL_Hiperdetalles_de_columna?
   token3:( _* "(" _*)
   composicion:HQL_Composicion_de_tabla
   token4:(_* ");")
-    { return { tabla, hiperatributos, composicion } }
+    { return { tabla, atributos, composicion } }
 HQL_Composicion_de_tabla = 
   sentencia1:HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_1
   sentenciaN:HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_n*
@@ -24,13 +24,13 @@ HQL_Sentencia_CREATE_COLUMN =
   tipo:HQL_Tipos
   detalles:HQL_Detalles_de_columna
   hiperdetalles:HQL_Hiperdetalles_de_columna?
-    { return { columna, tipo, detalles, hiperdetalles } }
+    { return { sentencia: "columna", columna, tipo, detalles, hiperdetalles } }
 HQL_Detalles_de_columna = (!(","/"\n"/"/*").)* { return text().trim() }
 HQL_Hiperdetalles_de_columna =
   token1:"/*"
-  hiperatributos:HQL_Hiperatributos
+  atributos:HQL_Hiperatributos
   token2:(_* "*/")
-  { return hiperatributos }
+  { return atributos }
 HQL_Hiperatributos = HQL_Hiperatributo*
 HQL_Hiperatributo =
   token1:(___ (__ __)? (__ __)? "@")
@@ -46,7 +46,7 @@ HQL_Sentencia_FOREIGN_KEY =
   token3:(_* "(" _*)
   columna_foranea:HQL_Id
   token4:(_* ")" _*)
-    { return { columna, tabla_foranea, columna_foranea } }
+    { return { sentencia: "clave foránea", columna, tabla_foranea, columna_foranea } }
 HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_n =
   token1:(_* "," _*)
   sentencia:HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_1
