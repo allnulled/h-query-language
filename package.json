@@ -1,6 +1,6 @@
 {
   "name": "h-query-language",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "Subconjunto SQL para extender atributos.",
   "main": "h-query-language.js",
   "scripts": {
