@@ -9,7 +9,7 @@ HQL_Sentencia_CREATE_TABLE =
   token3:( _* "(" _*)
   composicion:HQL_Composicion_de_tabla
   token4:(_* ");")
-    { return { tabla, atributos, composicion } }
+    { return { tabla, atributos, composicion, script: text() } }
 HQL_Composicion_de_tabla = 
   sentencia1:HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_1
   sentenciaN:HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_n*
