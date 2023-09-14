@@ -9,7 +9,7 @@ HQL_Sentencia_CREATE_TABLE =
   token3:( _* "(" _*)
   composicion:HQL_Composicion_de_tabla
   token4:(_* ");")
-    { return { tabla, atributos, composicion, script: text() } }
+    { return { tabla, atributos: atributos ? atributos : [], composicion, script: text() } }
 HQL_Composicion_de_tabla = 
   sentencia1:HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_o_PRIMARY_KEY_1
   sentenciaN:HQL_Sentencia_CREATE_COLUMN_o_FOREIGN_KEY_o_PRIMARY_KEY_n*
@@ -25,14 +25,16 @@ HQL_Sentencia_CREATE_COLUMN =
   tipo:HQL_Tipos
   detalles:HQL_Detalles_de_columna
   atributos:HQL_Hiperdetalles_de_columna?
-    { return { sentencia: "columna", columna, tipo, detalles, atributos } }
+    { return { sentencia: "columna", columna, tipo, detalles, atributos: atributos ? atributos : [] } }
 HQL_Detalles_de_columna = (!(","/"\n"/"/*").)* { return text().trim() }
 HQL_Hiperdetalles_de_columna =
   token1:"/*"
   atributos:HQL_Hiperatributos
   token2:(_* "*/")
-  { return atributos }
-HQL_Hiperatributos = HQL_Hiperatributo*
+    { return atributos }
+HQL_Hiperatributos =
+  atributos:HQL_Hiperatributo*
+    { return atributos ? atributos : [] }
 HQL_Hiperatributo =
   token1:(___ (__ __)? (__ __)? "@")
   hiperatributo:HQL_Hiperatributo_texto

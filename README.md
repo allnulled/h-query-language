@@ -30,3 +30,9 @@ Adapta el script de ejemplo a tu casuística de modelo de datos, y así podrás 
 ## Versiones
 
 Para consultar las versiones, ves al [CHANGELOG.md](./CHANGELOG.md).
+
+## Limitaciones
+
+De momento, los problemas encontrados son:
+
+  - Si quieres tener multiple keys, no puedes decírselo a la base de datos en el script de creación. Tienes que hacerlo indirectamente, por otro lado, triggers, atomizar un insert embediendo un select incremental al crear una instancia, cosas así.
