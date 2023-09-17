@@ -1,11 +1,15 @@
 {
   "name": "h-query-language",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Subconjunto SQL para extender atributos.",
   "main": "h-query-language.js",
+  "bin": {
+    "hql": "./bin.js"
+  },
   "scripts": {
     "build": "npx pegjs -o h-query-language.js h-query-language.pegjs",
-    "test": "node test"
+    "test": "node test",
+    "tester": "npx http-server -c-1 . -o '/test/tester.1.html'"
   },
   "keywords": [],
   "author": "allnulled",
