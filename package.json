@@ -1,10 +1,10 @@
 {
   "name": "hyper-query-language",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Subconjunto SQL para extender atributos.",
   "main": "hyper-query-language.js",
   "bin": {
-    "hql": "./bin.js"
+    "hql": "bin.js"
   },
   "scripts": {
     "build": "npx pegjs -o hyper-query-language.js hyper-query-language.pegjs",
@@ -13,5 +13,13 @@
   },
   "keywords": [],
   "author": "allnulled",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/hyper-query-language.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allnulled/hyper-query-language/issues"
+  },
+  "homepage": "https://github.com/allnulled/hyper-query-language#readme"
 }

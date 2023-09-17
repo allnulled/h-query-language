@@ -15,3 +15,7 @@
 
 - [✔] reemplazado `hql-deployer` por `restero`
 - [✔] reemplazado `h-query-language` por `Hyper-Query-Language`
+
+**Versión v0.0.9.** *A 17 de septiembre de 2023 a las 16:56pm.*
+
+- [✔] package.json ampliado para tener lo de github
