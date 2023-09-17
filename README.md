@@ -52,6 +52,7 @@ hql h-query-languaje.example.sql
 [*] ✔ Ok fichero.
 [*] 
 [*] ✔✔✔ Se procesaron todos los ficheros
+[*] 
 ```
 
 ## Desarrollo
@@ -64,7 +65,7 @@ Alternativamente, puedes aprovechar:
   - El script de sintaxis [h-query-language.pegjs](https://raw.githubusercontent.com/allnulled/h-query-language/main/h-query-language.pegjs) para la sintaxis de PEGjs.
   - El script de creación de bases de datos [h-query-languaje.example.sql](https://raw.githubusercontent.com/allnulled/h-query-language/main/h-query-languaje.example.sql) para el script de prueba de PEGjs.
 
-Adapta el script de ejemplo a tu casuística de modelo de datos, y así podrás probar rápidamente nuevos modelos de datos contra el lenguaje. Los scripts validados en esta aplicación deberían ser válidos para el [HQL-Deployer](https://github.com/allnulled/hql-deployer/tree/main). Así podrás desplegar APIs REST HTTP automáticamente de la forma más rápida y cómoda.
+Adapta el script de ejemplo a tu casuística de modelo de datos, y así podrás probar rápidamente nuevos modelos de datos contra el lenguaje. Los scripts validados en esta aplicación deberían ser válidos para el [restero](https://github.com/allnulled/restero/tree/main) y así podrás desplegar APIs REST HTTP automáticamente de la forma más rápida y cómoda.
 
 ## Versiones
 

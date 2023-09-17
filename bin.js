@@ -27,6 +27,7 @@ try {
     }
     console.log(`[*] `)
     console.log(`[*] ✔✔✔ Se procesaron todos los ficheros`)
+    console.log(`[*] `)
 } catch (error) {
     console.error(error);
 }
