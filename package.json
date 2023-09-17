@@ -1,13 +1,13 @@
 {
-  "name": "h-query-language",
-  "version": "0.0.7",
+  "name": "hyper-query-language",
+  "version": "0.0.8",
   "description": "Subconjunto SQL para extender atributos.",
-  "main": "h-query-language.js",
+  "main": "hyper-query-language.js",
   "bin": {
     "hql": "./bin.js"
   },
   "scripts": {
-    "build": "npx pegjs -o h-query-language.js h-query-language.pegjs",
+    "build": "npx pegjs -o hyper-query-language.js hyper-query-language.pegjs",
     "test": "node test",
     "tester": "npx http-server -c-1 . -o '/test/tester.1.html'"
   },

@@ -1,10 +1,19 @@
-# h-query-language
+# hyper-query-language
 
 Lenguaje subconjunto de SQL para extraer JSONs de los ficheros de creación de bases de datos.
 
+
+
+
 ## Instalar
 
-Puedes usar `git clone https://github.com/allnulled/h-query-language.git` para instalarlo, o descargártelo directamente
+Puedes usar `git clone https://github.com/allnulled/hyper-query-language.git` para instalarlo, o descargártelo directamente desde Github.
+
+También puedes instalártelo con npm así:
+
+```sh
+npm i -s hyper-query-language
+```
 
 ## Comandos
 
@@ -35,7 +44,7 @@ hql un-modulo.sql otro-modulo.sql otro-mas.sql
 Por ejemplo, cuando lo usas contra el ejemplo...
 
 ```sh
-hql h-query-languaje.example.sql
+hql hyper-query-languaje.example.sql
 ```
 
 ...sale esto:
@@ -47,8 +56,8 @@ hql h-query-languaje.example.sql
 [*] Se van a traducir 1 fichero(s).
 [*] 
 [*] Procesando fichero 1/1:
-[*]   - de: /home/carlos/Escritorio/Nuevo4/h-query-language/h-query-languaje.example.sql
-[*]   - a:  /home/carlos/Escritorio/Nuevo4/h-query-language/h-query-languaje.example.sql.json
+[*]   - de: /path/to/project/hyper-query-language/hyper-query-languaje.example.sql
+[*]   - a:  /path/to/project/hyper-query-language/hyper-query-languaje.example.sql.json
 [*] ✔ Ok fichero.
 [*] 
 [*] ✔✔✔ Se procesaron todos los ficheros
@@ -62,8 +71,8 @@ Para desarrollar tus scripts de creación de base de datos conforme al estándar
 Alternativamente, puedes aprovechar:
 
   - La aplicación online de [PEGjs online](https://pegjs.org/online)
-  - El script de sintaxis [h-query-language.pegjs](https://raw.githubusercontent.com/allnulled/h-query-language/main/h-query-language.pegjs) para la sintaxis de PEGjs.
-  - El script de creación de bases de datos [h-query-languaje.example.sql](https://raw.githubusercontent.com/allnulled/h-query-language/main/h-query-languaje.example.sql) para el script de prueba de PEGjs.
+  - El script de sintaxis [hyper-query-language.pegjs](https://raw.githubusercontent.com/allnulled/hyper-query-language/main/hyper-query-language.pegjs) para la sintaxis de PEGjs.
+  - El script de creación de bases de datos [hyper-query-languaje.example.sql](https://raw.githubusercontent.com/allnulled/hyper-query-language/main/hyper-query-languaje.example.sql) para el script de prueba de PEGjs.
 
 Adapta el script de ejemplo a tu casuística de modelo de datos, y así podrás probar rápidamente nuevos modelos de datos contra el lenguaje. Los scripts validados en esta aplicación deberían ser válidos para el [restero](https://github.com/allnulled/restero/tree/main) y así podrás desplegar APIs REST HTTP automáticamente de la forma más rápida y cómoda.
 

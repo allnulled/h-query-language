@@ -10,3 +10,8 @@
 **Versión v0.0.6.** *A 17 de septiembre de 2023 a las 16:36pm.*
 
 - [✔] `hql` como programa de línea de comandos
+
+**Versión v0.0.8.** *A 17 de septiembre de 2023 a las 16:49pm.*
+
+- [✔] reemplazado `hql-deployer` por `restero`
+- [✔] reemplazado `h-query-language` por `Hyper-Query-Language`
