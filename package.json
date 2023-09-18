@@ -8,8 +8,7 @@
   },
   "scripts": {
     "build": "npx pegjs -o hyper-query-language.js hyper-query-language.pegjs",
-    "test": "node test",
-    "tester": "npx http-server -c-1 . -o '/test/tester.1.html'"
+    "test": "node test"
   },
   "keywords": [],
   "author": "allnulled",
