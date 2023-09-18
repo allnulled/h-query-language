@@ -19,3 +19,11 @@
 **Versión v0.0.9.** *A 17 de septiembre de 2023 a las 16:56pm.*
 
 - [✔] package.json ampliado para tener lo de github
+
+**Versión v0.0.9.** *A 18 de septiembre de 2023 a las 08:46pm.*
+
+- [✔] más actualizaciones del readme
+
+**Versión v0.0.10.** *A 18 de septiembre de 2023 a las 09:02pm.*
+
+- [✔] más actualizaciones del readme
