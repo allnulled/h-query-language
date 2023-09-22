@@ -109,8 +109,30 @@ Adapta el script de ejemplo a tu casuística de modelo de datos, y así podrás 
 
 Para consultar las versiones, ves al [CHANGELOG.md](./CHANGELOG.md).
 
-## Limitaciones
+## Ejemplos
 
-De momento, los problemas encontrados son:
+Esto es un ejemplo muy sencillo de la sintaxis soportada por el HQL:
 
-  - Si quieres tener multiple keys, no puedes decírselo a la base de datos en el script de creación. Tienes que hacerlo indirectamente, por otro lado, triggers, atomizar un insert embediendo un select incremental al crear una instancia, cosas así.
+```sql
+CREATE TABLE Tabla /*
+  @hiperatributo1: valor
+  @hiperatributo2: valor
+  @hiperatributo3: valor
+  @hiperatributos4:
+    - hipersubatributo1: valor
+    - hipersubatributo1: valor 2
+    - hipersubatributo1: valor 3
+  @hiperatributo5: valor
+  @hiperatributo6: valor
+  @hiperatributo7: valor
+*/ (
+  id INTEGER PRIMARY KEY AUTOINCREMENT /*
+    @hiperatributo8: valor
+    @hiperatributo9: valor
+    @hiperatributo10: valor
+  */,
+  columna VARCHAR(255)
+);
+```
+
+Como se ve, está el SQL, y luego están los hiperatributos, aplicados a tabla y/o a columna. En el caso del `@hiperatributos4` está usando los *hipersubatributos*, que es un hiperatributo compuesto de varios hiperatributos. Por llamarlo de alguna forma.

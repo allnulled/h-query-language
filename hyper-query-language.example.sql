@@ -12,7 +12,13 @@ CREATE TABLE Usuario /*
   contrasenya VARCHAR(512)
 );
 
-CREATE TABLE Voto (
+CREATE TABLE Voto /*
+  @es_auth: no
+  @tiene_autorizadores:
+    - tiene_autorizador: solo_administradores
+    - tiene_autorizador: incluir: select | insert | update | delete: no_usable
+  @otros_atributos: también
+*/ (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   id_usuario INTEGER,
   id_votacion INTEGER,

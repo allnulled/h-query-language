@@ -27,3 +27,11 @@
 **Versión v0.0.10.** *A 18 de septiembre de 2023 a las 09:02pm.*
 
 - [✔] más actualizaciones del readme
+
+**Versión v0.1.0.** *A 22 de septiembre de 2023 a las 11:58pm.*
+
+- [✔] añadidos hipersubatributos
+  - [✔] arreglado el test para funcionar con las nuevas rutas
+  - [✔] integrado en el test ejemplo de hipersubatributo
+  - [✔] integrado en el readme ejemplo de hipersubatributo
+  - [✔] actualizado el parser

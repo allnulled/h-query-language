@@ -49,7 +49,17 @@
   },
   {
     "tabla": "Voto",
-    "atributos": [],
+    "atributos": [
+      "es_auth: no",
+      [
+        "tiene_autorizables:",
+        [
+          "solo_administradores",
+          "incluir: select | insert | update | delete: no_usable"
+        ]
+      ],
+      "otros_atributos: también"
+    ],
     "composicion": [
       {
         "sentencia": "columna",
@@ -92,7 +102,7 @@
         "columna_foranea": "id"
       }
     ],
-    "script": "\n\nCREATE TABLE Voto (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  id_usuario INTEGER,\n  id_votacion INTEGER,\n  sentido VARCHAR(32),\n  FOREIGN KEY (id_usuario) REFERENCES Usuario (id),\n  FOREIGN KEY (id_votacion) REFERENCES Votacion (id)\n);"
+    "script": "\n\nCREATE TABLE Voto /*\n  @es_auth: no\n  @tiene_autorizables:\n    - solo_administradores\n    - incluir: select | insert | update | delete: no_usable\n  @otros_atributos: también\n*/ (\n  id INTEGER PRIMARY KEY AUTOINCREMENT,\n  id_usuario INTEGER,\n  id_votacion INTEGER,\n  sentido VARCHAR(32),\n  FOREIGN KEY (id_usuario) REFERENCES Usuario (id),\n  FOREIGN KEY (id_votacion) REFERENCES Votacion (id)\n);"
   },
   {
     "tabla": "Comentario",

@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const hql_parser_path = path.resolve(__dirname, "h-query-language.js");
+const hql_parser_path = path.resolve(__dirname, "hyper-query-language.js");
 const hql_parser = require(hql_parser_path);
 const args = process.argv;
 const node_path = args.shift();
