@@ -28,7 +28,7 @@
 
 - [✔] más actualizaciones del readme
 
-**Versión v0.1.0.** *A 22 de septiembre de 2023 a las 11:58pm.*
+**Versión v0.0.12.** *A 22 de septiembre de 2023 a las 11:58pm.*
 
 - [✔] añadidos hipersubatributos
   - [✔] arreglado el test para funcionar con las nuevas rutas
