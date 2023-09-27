@@ -35,3 +35,6 @@
   - [✔] integrado en el test ejemplo de hipersubatributo
   - [✔] integrado en el readme ejemplo de hipersubatributo
   - [✔] actualizado el parser
+
+**Versión v0.0.14.** *A 27 de septiembre de 2023 a las 20:27pm.*
+- [✔] añadido tipo de dato REAL para números con decimales
