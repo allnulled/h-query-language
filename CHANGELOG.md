@@ -38,3 +38,6 @@
 
 **Versión v0.0.14.** *A 27 de septiembre de 2023 a las 20:27pm.*
 - [✔] añadido tipo de dato REAL para números con decimales
+
+**Versión v0.0.15.** *A 2 de octubre de 2023 a las 12:54pm.*
+- [✔] añadido salto de línea tipo Windows: \r\n
