@@ -109,6 +109,23 @@ Adapta el script de ejemplo a tu casuística de modelo de datos, y así podrás 
 
 Para consultar las versiones, ves al [CHANGELOG.md](./CHANGELOG.md).
 
+## Sintaxis
+
+La sintaxis de HQL solo permite la sentencia `CREATE TABLE` del SQL. Dentro de la creación de tablas, se permiten 4 sentencias:
+
+  - **Clave primaria.** Todas las tablas deben tener `id` como clave primaria autoincremental para que [`restero`](https://github.com/allnulled/restero) funcione posteriormente. Por lo cual, aunque se permita una sintaxis de claves primarias (`PRIMARY KEY (clave_1, clave_2, clave_3)`), no debe usarse, porque la clave primaria siempre debe ir con `id INTEGER PRIMARY KEY AUTOÏNCREMENT` o `AUTO_INCREMENT` para MySQL, y esto se hace con la sentencia de **Columna**. Por lo cual, este tipo de sentencia, aunque permitida, está totalmente desaconsejada.
+  - **Columna.** Esta sentencia es la más habitual, y es la adecuada para construir una nueva columna dentro de la tabla que estamos describiendo. El tipo de dato no es libre, y solo se permiten: `INTEGER`, `VARCHAR`, `TEXT`, `DATETIME`, `REAL`, `BLOB`. Ejemplos:
+     - `id INTEGER PRIMARY KEY AUTOINCREMENT`
+     - `nombre VARCHAR(255)`
+     - `nacimiento DATETIME`
+     - ...
+  - **Clave foránea.** Sirve para crear referencias de columnas de otras tablas. Ejemplos:
+     - `FOREIGN KEY (columna_1) REFERENCES tabla_2 (columna_2)`
+  - **Constricción única**. Sirve para crear restricciones de unicidad entre múltiples columnas, las cuales conjuntamente deben presentar unicidad en cada registro. Esta sentencia solo se puede usar contra `mysql` y no contra `sqlite`. Ejemplo:
+     - `CONSTRAINT columna_nueva UNIQUE (columna_1, columna_2, columna_3)`
+
+Básicamente, con estos 3 tipos de sentencia debemos poder diseñar bases de datos que se ajusten a los requisitos de [`restero`](https://github.com/allnulled/restero) para poder desplegar aplicaciones REST automáticamente.
+
 ## Ejemplos
 
 Esto es un ejemplo muy sencillo de la sintaxis soportada por el HQL:

@@ -45,3 +45,6 @@
 **Versión v0.0.16.** *A 4 de octubre de 2023 a las 09:11am.*
 - [✔] permite MULTIPLE KEYS para MySQL
   - [✔] añadida sentencia CONSTRAINT x UNIQUE (id1, id2, ...)
+
+**Versión v0.0.17.** *A 4 de octubre de 2023 a las 09:32am.*
+- [✔] documentada la sintaxis en el README.
