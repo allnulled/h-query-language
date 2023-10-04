@@ -41,3 +41,7 @@
 
 **Versión v0.0.15.** *A 2 de octubre de 2023 a las 12:54pm.*
 - [✔] añadido salto de línea tipo Windows: \r\n
+
+**Versión v0.0.16.** *A 4 de octubre de 2023 a las 09:11am.*
+- [✔] permite MULTIPLE KEYS para MySQL
+  - [✔] añadida sentencia CONSTRAINT x UNIQUE (id1, id2, ...)

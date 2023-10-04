@@ -24,7 +24,8 @@ CREATE TABLE Voto /*
   id_votacion INTEGER,
   sentido VARCHAR(32),
   FOREIGN KEY (id_usuario) REFERENCES Usuario (id),
-  FOREIGN KEY (id_votacion) REFERENCES Votacion (id)
+  FOREIGN KEY (id_votacion) REFERENCES Votacion (id),
+  CONSTRAINT un_usuario_por_votacion UNIQUE (id_usuario, id_votacion)
 );
 
 CREATE TABLE Comentario (
