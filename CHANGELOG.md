@@ -48,3 +48,6 @@
 
 **Versión v0.0.17.** *A 4 de octubre de 2023 a las 09:32am.*
 - [✔] documentada la sintaxis en el README.
+
+**Versión v0.0.18.** *A 30 de octubre de 2023 a las 12:40pm.*
+- [✔] soporte para tipos DATE, TIME y TIMESTAMP.
