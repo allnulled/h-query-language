@@ -51,3 +51,6 @@
 
 **Versión v0.0.18.** *A 30 de octubre de 2023 a las 12:40pm.*
 - [✔] soporte para tipos DATE, TIME y TIMESTAMP.
+
+**Versión v0.0.19.** *A 30 de octubre de 2023 a las 12:42pm.*
+- [✔] soporte para tipos DATE, TIME y TIMESTAMP (y el parser compilado xD).
