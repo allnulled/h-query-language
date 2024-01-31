@@ -1,6 +1,6 @@
 {
   "name": "hyper-query-language",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Subconjunto SQL para extender atributos.",
   "main": "hyper-query-language.js",
   "bin": {
