@@ -1,8 +1,9 @@
 HQL_Lenguaje = HQL_Sentencias
-HQL_Sentencias = _* sentencias:HQL_Sentencia* _* { return sentencias }
-HQL_Sentencia = HQL_Sentencia_CREATE_TABLE
+HQL_Sentencias = _* sentencias:HQL_Sentencia* _* { return sentencias.filter(s => s !== null) }
+HQL_Sentencia = HQL_Sentencia_CREATE_TABLE / HQL_Sentencia_Comentario_unilinea
+HQL_Sentencia_Comentario_unilinea = _* "--" [^\n]* "\n" { return null }
 HQL_Sentencia_CREATE_TABLE = 
-  token1:(_* ("CREATE TABLE"/"create table") _+)
+  token1:(_* ("CREATE TABLE"/"create table") _+ ("IF NOT EXISTS " / "if not exists ")?)
   tabla:HQL_Id
   token2:( _* )
   atributos:HQL_Hiperdetalles_de_columna?
@@ -66,7 +67,9 @@ HQL_Hipersubatributos =
   subatributos:HQL_Hipersubatributo+ 
     { return subatributos }
 HQL_Hipersubatributo = ___+ (__ __)* "-" texto:HQL_Hiperatributo_texto { return texto.trim() }
-HQL_Tipos = ("INTEGER"/"integer"/"int"/"VARCHAR"/"varchar"/"TEXT"/"text"/"DATETIME"/"datetime"/"DATE"/"date"/"TIMESTAMP"/"timestamp"/"TIME"/"time"/"REAL"/"real"/"BLOB"/"blob")
+HQL_Tipos = ("BOOLEAN"/"boolean"/"INTEGER"/"integer"/"INT"/"int"/ HQL_Decimal_con_parentesis /"DECIMAL"/"decimal"/"VARCHAR"/"varchar"/"TEXT"/"text"/"DATETIME"/"datetime"/"DATE"/"date"/"TIMESTAMP"/"timestamp"/"TIME"/"time"/"REAL"/"real"/"BLOB"/"blob")
+HQL_Decimal_con_parentesis = ("DECIMAL(" / "decimal(") _* HQL_Numero _* "," _* HQL_Numero _* ")" { return text() }
+HQL_Numero = [0-9]+ {return text() }
 HQL_Sentencia_PRIMARY_KEY =
   token1:(_* ("PRIMARY KEY"/"primary key") _* )
   token3:(_* "(" _*)
